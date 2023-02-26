@@ -1,0 +1,44 @@
+openapi: 3.0.2
+info:
+  title: Swagger
+  version: 1.0.0
+servers:
+  - url: http://127.0.0.1:5000/api/v1
+    description: Dev server
+paths:
+  /report/:
+    get:
+      summary: report for drivers
+      description: Take report list drivers
+      operationId: report
+      tags:
+        - report
+      parameters:
+        - name: order
+          in: query
+          required: false
+          description: identification
+          example: order=desc
+          schema:
+            type: string
+            enum:
+              - desc
+        - name: format
+          in: query
+          required: false
+          description: identification
+          example: order=desc
+          schema:
+            type: string
+            enum:
+              - json
+              - xml
+      responses:
+        '200':
+          'description': good Report driver
+          content:
+            application/json;charset=UTF-8:
+                schema:
+                  type: array
+                  items:
+                  

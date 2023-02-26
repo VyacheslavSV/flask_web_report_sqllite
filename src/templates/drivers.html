@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+<ol>
+    {% for line in driver_data %}
+    <li><a href="{{url_for('.drivers', driver_id = line['abbr'])}}">
+        <abbr>{{line['abbr']}}</abbr></a>
+        <em>{{line['name']}}</em>
+    </li>
+    {% endfor %}
+</ol>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+<ol>
+    {% for value in result %}
+    <li><em>{{ value['name'] }}</em> <b>{{ value['team'] }}</b>
+        <time>{{ value['time'] }}</time>
+    </li>
+    {% endfor %}
+</ol>
+</body>
+</html>
